@@ -1,0 +1,28 @@
+### Billing Accounts - List
+GET https://management.azure.com/providers/Microsoft.Billing/billingAccounts?api-version=2019-10-01-preview
+Authorization: {{$aadToken}}
+
+### Billing Role Definitions - list By Billing Account
+GET https://management.azure.com/providers/Microsoft.Billing/billingAccounts/{{billingAccountId}}/billingRoleDefinitions?api-version=2019-10-01-preview
+Authorization: {{$aadToken}}
+
+### Billing Role Assignments - List All by Billing Account which Returns all Role Assignments
+GET https://management.azure.com/providers/Microsoft.Billing/billingAccounts/{{billingAccountId}}/billingRoleAssignments?api-version=2019-10-01-preview
+Authorization: {{$aadToken}}
+
+
+### Billing Role Assignments of EA Reader assignment.
+# Required for EA Access of FinOps Hub
+# Make sure to generate a new GUID for the billingRoleAssignmentNameNewGUID using powershell command below
+# Powershell [guid]::NewGuid()
+PUT https://management.azure.com/providers/Microsoft.Billing/billingAccounts/{{billingAccountId}}/billingRoleAssignments/{{billingRoleAssignmentNameNewGUID}}?api-version=2019-10-01-preview
+Content-Type: application/json
+Authorization: {{$aadToken}}
+
+{
+    "properties": {
+        "principalId": "{{principalId}}",
+        "principalTenantId": "{{principalTenantId}}",
+        "roleDefinitionId": "/providers/Microsoft.Billing/billingAccounts/{{billingAccountId}}/billingRoleDefinitions/{{roleDefinitionReader}}"
+    }
+}

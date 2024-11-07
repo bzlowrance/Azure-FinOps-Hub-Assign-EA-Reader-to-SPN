@@ -1,0 +1,18 @@
+{
+// Use ctrl + shift + p to select preferences open user settings json and add contents of this file.
+// Use ctrl + alt + e to select the variable enviornment of FinOpsRestCalls defined below.
+"rest-client.environmentVariables": {        
+        "$shared": {
+            "author": "Barry Lowrance"
+        },
+         "FinOpsRestCalls": {
+            "principalId": "ef734104-7788-4c15-XXXXXXXXXXXX", //ApplicationId or ClientId
+            "principalTenantId": "72f988bf-86f1-41af-91ab-XXXXXXXXXXXX",
+            "billingAccountId": "1234567",
+            "roleDefinitionWriter": "9f1983cb-2574-400c-87e9-34cf8e2280db", //Object ID for the roleDefinitionWriter
+            "roleDefinitionReader": "24f8edb6-1668-4659-b5e2-40bb5f3a7d7e", //Object ID for the roleDefinitionReader
+            "billingRoleAssignmentNameNewGUID": "Replace-With-Generated-GUID-XXXXXXXXXXXX",  //Genereated new name of the Role for the SPN via New-Guid Powershell [guid]::NewGuid()
+        }
+    }
+
+}
