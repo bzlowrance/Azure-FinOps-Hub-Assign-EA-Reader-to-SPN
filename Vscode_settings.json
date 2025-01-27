@@ -11,7 +11,7 @@
             "billingAccountId": "1234567",
             "roleDefinitionWriter": "9f1983cb-2574-400c-87e9-34cf8e2280db", //Object ID for the roleDefinitionWriter
             "roleDefinitionReader": "24f8edb6-1668-4659-b5e2-40bb5f3a7d7e", //Object ID for the roleDefinitionReader
-            "billingRoleAssignmentNameNewGUID": "Replace-With-Generated-GUID-XXXXXXXXXXXX",  //Genereated new name of the Role for the SPN via New-Guid Powershell [guid]::NewGuid()
+            "billingRoleAssignmentNameNewGUID": "Replace-With-Generated-GUID-XXXXXXXXXXXX"  //Genereated new name of the Role for the SPN via New-Guid Powershell [guid]::NewGuid()
         }
     }
 
