@@ -1,0 +1,34 @@
+{
+  "$schema": "https://aka.ms/finops/hubs/settings-schema",
+  "type": "HubInstance",
+  "version": "0.9",
+  "learnMore": "https://aka.ms/finops/hubs",
+  "scopes": [
+    {
+      "scope": "/subscriptions/11111111-2222-3333-4444-555555555555"
+    },
+    {
+      "scope": "/subscriptions/22222222-3333-4444-5555-666666666666"
+    },
+    {
+      "scope": "/subscriptions/33333333-4444-5555-6666-777777777778"
+    },
+    {
+      "scope": "/subscriptions/44444444-5555-6666-7777-888888888889"
+    }
+  ],
+  "retention": {
+    "final": {
+      "months": 13
+    },
+    "msexports": {
+      "days": 0
+    },
+    "ingestion": {
+      "months": 13
+    },
+    "raw": {
+      "days": 0
+    }
+  }
+}
